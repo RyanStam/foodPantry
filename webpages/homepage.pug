@@ -1,0 +1,83 @@
+doctype html
+- var gray9 = "#212529"
+- var gray8 = "#343a40"
+html(lang='en')
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        )
+        //- link(
+        //-     rel="stylesheet"
+        //-     href="styles/nav.css"
+        //- )
+        title Homepage
+    
+    body.font-monospace(style=`background-color: ${gray8}; color: white` onload="typeWriter()")
+        div.min-vh-100
+            nav.navbar.navbar-expand-md.navbar-right.navbar-dark.bg-dark.p-2.shadow
+                div.container-fluid.px-md-3.h-25
+                    a.navbar-brand.p-0(href="#")
+                        //- img(src="/blah.png" alt="Food Pantry" width="68" height="51")
+                    button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                        span.navbar-toggler-icon 
+                    div#navbarSupportedContent.collapse.navbar-collapse.container-fluid
+                        ul.navbar-nav.ms-auto
+                            li.nav-item
+                                a.nav-link.active(aria-current="page" href="/homepage") Homepage
+                            li.nav-item
+                                a.nav-link(aria-current="page" href="/about") Our Mission
+                            //- li.nav-item.dropdown
+                            //-     a.nav-link.dropdown-toggle(href="/projects" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false") Projects
+                            //-     ul.dropdown-menu(aria-labelledby="navbarDropdown")
+                            //-         li
+                            //-             a.dropdown-item(href="/projects") Portfolio Website 
+                            //-         li
+                            //-             hr.dropdown-divider
+                            //-         li
+                            //-             a.dropdown-item(href="/projects") Food Pantry System 
+                            //-         li
+                            //-             hr.dropdown-divider
+                            //-         li
+                            //-             a.dropdown-item(href="/projects") Other
+                            li.nav-item 
+                                a.nav-link(href="/music") Admin Resources
+                            li.nav-item 
+                                a.nav-link(href="/contact") Contact
+            section.container-fluid.position-absolute.bottom-50.row
+                h2#title.display-1.position-static(style="text-align: center") &nbsp;
+                h1#name.display-1.position-static(style="text-align: center") &nbsp;
+                
+
+        
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")
+        
+        script.
+            var i1=0, i2=0
+            var txt1 = 'Welcome to...'
+            var txt2 = 'The Klein High Food Pantry!'
+            var speed = 100;
+            function typeWriter() {
+                if (i1 < txt1.length) {
+                    document.getElementById("title").innerHTML += txt1.charAt(i1);
+                    i1++;
+                    setTimeout(typeWriter, speed);
+                    if (i1 >= txt1.length) {
+                        setTimeout(typeWriter2, speed*10);
+                    }
+                    return;
+                }
+            }
+            function typeWriter2() {
+                if (i2 < txt2.length) {
+                    document.getElementById("name").innerHTML += txt2.charAt(i2);
+                    i2++;
+                    setTimeout(typeWriter2, speed);
+                    return;
+                }
+            }
+

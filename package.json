@@ -1,0 +1,24 @@
+{
+  "name": "foodpantry",
+  "version": "1.0.0",
+  "description": "KISD Food Pantry Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanStam/foodPantry.git"
+  },
+  "author": "Ryan Stam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanStam/foodPantry/issues"
+  },
+  "homepage": "https://github.com/RyanStam/foodPantry#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "pug": "^3.0.2"
+  }
+}
