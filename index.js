@@ -10,4 +10,8 @@ app.get('/', (req, res) => {
     res.render('homepage');
 });
 
+app.get('/mission', (req, res) => {
+    res.render('mission');
+});
+
 app.listen(3000);
